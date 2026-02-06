@@ -982,18 +982,23 @@
       "type": "external",
       "riskLevel": "low",
       "threats": [
-        "code-threat-secret-local_travel_agent.py-18-1770359812",
-        "code-threat-api-local_travel_agent.py-108-1770359812"
+        "code-threat-secret-local_travel_agent.py-18-1770360434",
+        "code-threat-api-local_travel_agent.py-108-1770360434"
       ],
       "findings": [
         {
-          "id": "code-threat-secret-local_travel_agent.py-18-1770359812",
+          "id": "code-threat-secret-local_travel_agent.py-18-1770360434",
           "title": "Hardcoded Credential Detected",
           "description": "Hardcoded credential found: Secret: api-key at local_travel_agent.py:19 (9 instances across 3 files)",
           "severity": "critical",
           "stride": "I",
           "maestro": "",
-          "attackIds": null,
+          "attackIds": [
+            "T1005",
+            "T1041",
+            "T1567",
+            "T1083"
+          ],
           "mitigations": [
             "CRITICAL: Remove hardcoded credentials immediately",
             "Use environment variables or secure secret management",
@@ -1004,13 +1009,17 @@
           "source": "TITO"
         },
         {
-          "id": "code-threat-api-local_travel_agent.py-108-1770359812",
+          "id": "code-threat-api-local_travel_agent.py-108-1770360434",
           "title": "Unauthenticated API Endpoint",
           "description": "API endpoint 'unknown' at local_travel_agent.py:109 may lack authentication checks",
           "severity": "high",
           "stride": "S(E)",
           "maestro": "",
-          "attackIds": null,
+          "attackIds": [
+            "T1078",
+            "T1110",
+            "T1566"
+          ],
           "mitigations": [
             "Implement authentication middleware for all API endpoints",
             "Verify authorization checks are in place before processing requests",
@@ -1029,18 +1038,23 @@
       "type": "api",
       "riskLevel": "low",
       "threats": [
-        "code-threat-secret-local_travel_agent.py-18-1770359812",
-        "code-threat-api-local_travel_agent.py-108-1770359812"
+        "code-threat-secret-local_travel_agent.py-18-1770360434",
+        "code-threat-api-local_travel_agent.py-108-1770360434"
       ],
       "findings": [
         {
-          "id": "code-threat-secret-local_travel_agent.py-18-1770359812",
+          "id": "code-threat-secret-local_travel_agent.py-18-1770360434",
           "title": "Hardcoded Credential Detected",
           "description": "Hardcoded credential found: Secret: api-key at local_travel_agent.py:19 (9 instances across 3 files)",
           "severity": "critical",
           "stride": "I",
           "maestro": "",
-          "attackIds": null,
+          "attackIds": [
+            "T1005",
+            "T1041",
+            "T1567",
+            "T1083"
+          ],
           "mitigations": [
             "CRITICAL: Remove hardcoded credentials immediately",
             "Use environment variables or secure secret management",
@@ -1051,13 +1065,17 @@
           "source": "TITO"
         },
         {
-          "id": "code-threat-api-local_travel_agent.py-108-1770359812",
+          "id": "code-threat-api-local_travel_agent.py-108-1770360434",
           "title": "Unauthenticated API Endpoint",
           "description": "API endpoint 'unknown' at local_travel_agent.py:109 may lack authentication checks",
           "severity": "high",
           "stride": "S(E)",
           "maestro": "",
-          "attackIds": null,
+          "attackIds": [
+            "T1078",
+            "T1110",
+            "T1566"
+          ],
           "mitigations": [
             "Implement authentication middleware for all API endpoints",
             "Verify authorization checks are in place before processing requests",
@@ -1116,7 +1134,7 @@
   "metadata": {
     "title": "Threat Model: https://github.com/asa1997/ai_travel_agent",
     "description": "Data Flow Diagram with STRIDE-LM and MAESTRO Analysis",
-    "generated": "2026-02-06T06:36:52Z",
+    "generated": "2026-02-06T06:47:14Z",
     "repository": "https://github.com/asa1997/ai_travel_agent",
     "branch": "main",
     "totalNodes": 2,
